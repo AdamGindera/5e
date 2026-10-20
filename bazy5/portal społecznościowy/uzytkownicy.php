@@ -48,7 +48,7 @@ $number = $result->fetch_assoc();
         <section class="card">
             <?php
             $login_f = $_POST['login'] ?? NULL;
-            $password_f = $_POST['haslo'] ?? NULL;
+            $password_f = $_POST['password'] ?? NULL;
             
             // var_dump($login_f);
             if ($login_f && $password_f) {
@@ -58,15 +58,39 @@ $number = $result->fetch_assoc();
                 $result = $link->query($sql);
                 if ($result->num_rows == 0){
                   echo "login nie istnieje";
-                }
+            }
                 else {
-                    echo "$password_f";
-                    $password = $result->fetch_assoc();
-                    var_dump($password);
+                    // echo "$password_f";
+                    // login istnieje
+                    $password_d = $result->fetch_assoc();
+                    if ($password_d != sha1($password_f)){
+                        echo "hasło nieprawidłowe ";
+                    }
+                    else {
+                        // hasła się zgadzają
+                        $sql = "SELECT login, rok_urodz, przyjaciol, hobby, zdjecie
+                                FROM uzytkownicy INNER JOIN dane ON uzytkownicy.id=dane.id
+                                WHERE login = '$login_f'";
+                        $result = $link->query($sql);
+                        $data = $result->fetch_assoc();
+                        $age = date("Y") - $data['rok_urodz'];
+                        echo "
+                        <img src='{$data['zdjecie']}' alt='osoba'>
+            <h4>{$data['login']} ($age)</h4>
+            <p>hobby:{hobby}</p>
+            <h1><img src='icon-on.png' alt=''>({przyjaciol})</h1>
+            <button><a href='dane.html'>więcej informacji</a></button>
+                        ";
+                    }
                 }
             }
 
             ?>
+            <!-- <img src='{zdjecie}' alt='osoba'>
+            <h4>{login} ($age)</h4>
+            <p>hobby:{hobby}</p>
+            <h1><img src='icon-on.png' alt=''>({przyjaciol})</h1>
+            <button><a href='dane.html'>więcej informacji</a></button> -->
         </section>
     </section>
 </main>

@@ -58,7 +58,7 @@ FROM magazyny;
 SELECT magazyny.kod, COUNT(kontenery.kod)
 FROM magazyny LEFT JOIN kontenery ON magazyny.kod=kontenery.magazyn
 GROUP BY magazyny.kod;
-????????
+
 -- Wskazówka: wybierz kod magazynu z tabeli magazyny oraz policz kod z tabeli Kontenery; dane wybieraj z dwóch tabel połączonych połączeniem rozszerzającym (LEFT JOIN lub RIGHT JOIN), z rozszerzanej strony powinna być tabela Magazyny (wybieramy wszystkie magazyny, także te, w których nie ma kontenerów); grupowanie według kodu magazynu
  
 -- 10.  Wyświetl kody wszystkich magazynów, które są przeładowane (magazyn jest przeładowany, jeśli liczba zawartych w nim kontenerów jest większa niż jego pojemność)  (zrzut)
@@ -71,7 +71,7 @@ HAVING COUNT(kontenery.kod) > magazyny.pojemnosc;
 -- np. wyświetl kody tych magazynów (z tabeli Magazyny), których pojemność jest mniejsza niż
 
 -- (podzapytanie) ilość kontenerów (z tabeli kontenery), których kod magazynu (pole magazyn) jest taki jak kod magazynu z tabeli głównego zapytania (czyli Magazyny)
-?
+
 
 -- 11. Wyświetl kody wszystkich kontenerów zlokalizowanych w Chicago wraz z lokalizacją i pojemnością magazynów . Uwzględnij w zestawieniu także te magazyny z Chicago, w których nie ma aktualnie kontenerów  (zrzut)
 SELECT Kontenery.Kod, lokalizacja, pojemnosc

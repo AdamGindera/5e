@@ -1,0 +1,73 @@
+* {
+    font-family: serif;
+}
+
+header {
+    background-color: crimson;
+    font: white;
+    text-align: center;
+    letter-spacing: 5px;
+    word-spacing: 30px;
+    padding: 10px;
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.deal_of_the_day {
+    background-color: mistyrose;
+    height: 300px;
+    padding: 10px;
+    margin: 10px 50px;
+    border: 1px solid Crimson;
+}
+
+.deal_of_the_day img {
+    float: left;
+}
+
+.premium_offers {
+    padding: 10px;
+}
+
+.brand {
+    padding: 10px;
+}
+
+footer {
+    background-color: Crimson;
+    color: white;
+    padding: 10px;
+}
+
+.card {
+    background-color: Snow;
+    height: 450px;
+    width: 21%;
+    margin: 1%;
+    text-align: center;
+    border: 1px solid Crimson;
+    /* display: inline-block; */
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    max-width: 100%;
+}
+
+h4 {
+    font-size: 180%;
+    text-align: center;
+    color: crimson;
+}
+
+a {
+    color: white;
+}
