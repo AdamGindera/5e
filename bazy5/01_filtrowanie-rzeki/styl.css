@@ -1,0 +1,71 @@
+* {
+    font-family: Georgia;
+}
+
+header {
+    display: flex;
+}
+
+
+.header-left, .header-right {
+    background-color: Navy;
+    color: white;
+    text-align: center;
+    height: 100px;
+    width: 50%;
+}
+
+.header-left img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+nav {
+    background-color: navy;
+    padding: 20px;
+}
+
+.radio-label {
+    color: silver;
+    margin: 50px;
+}
+.radio-label:hover {
+    color: white;
+    text-decoration-line: underline;
+}
+
+main {
+    display: flex;
+}
+.left, .right {
+    background-color: Azure;
+    height: 550px;
+}
+
+.left {
+    width: 70%;
+}
+
+.right {
+    width: 30%;
+}
+
+table {
+    border: 1px solid navy;
+    margin: auto;
+    width: 70%;
+}
+
+.right img {
+    width: 90%;
+}
+
+tr:hover {
+    background-color: skyblue;
+}
+
+footer {
+    background-color: navy;
+    color: white;
+}

@@ -51,8 +51,8 @@ SELECT *
 FROM filmy LEFT JOIN kina ON filmy.kod=kina.film;
 -- 8. Wyświetl wszystkie dane o kinach i filmach, uwzględnij w zestawieniu także te kina, w których aktualnie nie są wyświetlane żadne filmy oraz  te filmy, które nie są aktualnie wyświetlane w żadnych kinach. 
 SELECT *
-FROM kina LEFT JOIN filmy ON kina.film=filmy.kod;
-
+FROM kina LEFT JOIN filmy ON kina.film=filmy.kod
+UNION
 SELECT *
 FROM filmy LEFT JOIN kina ON filmy.kod=kina.film;
 -- 9. Dodaj film  "One, Two, Three" (bez ratingu)

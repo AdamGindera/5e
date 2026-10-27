@@ -1,0 +1,38 @@
+* {
+    font-family: Cambria;
+}
+
+body {
+    background-color: mistyrose;
+}
+header, footer {
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+}
+
+header img {
+    height: 200px;
+}
+
+main {
+    display: flex;
+}
+
+section {
+    background-color: Plum;
+    height: 400px;
+    margin: 5px;
+    box-shadow: 4px 4px 10px dimgray;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+}
+
+button:hover {
+    background-color: #505050;
+    color: white;
+}
+

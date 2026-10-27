@@ -10,6 +10,6 @@ SELECT nazwa, model, rocznik, cena, zdjecie
 FROM marki INNER JOIN samochody ON marki.id=samochody.marki_id
 WHERE wyrozniony = 1;
 -- ‒ Zapytanie 4: wybierające jedynie pola: model, cena, zdjecie z tabeli samochody dla samochodów o nazwie marki Audi. Należy posłużyć się relacją
-SELECT model, cena
+SELECT model, cena, zdjecie
 FROM marki INNER JOIN samochody ON marki.id=samochody.marki_id
 WHERE nazwa = 'Audi';
